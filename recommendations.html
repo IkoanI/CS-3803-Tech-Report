@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations - KLG</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content-section { padding: 40px 0; }
+        p { line-height: 1.8; font-size: 1.1rem; }
+        .comparison-img { width: 100%; height: auto; border: 2px solid #dee2e6; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        figcaption { font-weight: bold; margin-top: 10px; color: #495057; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">KLG Redesign</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="data.html">Data & Findings</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="recommendations.html">Recommendations</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container content-section">
+        
+        <section class="mb-5">
+            <h2 class="mb-4 border-bottom pb-2">Recommendations</h2>
+            
+            <p>To address the navigation and discoverability issues[cite: 62], we recommend overhauling the Units page to feature a grid layout. This redesign minimizes scrolling, making it significantly more desktop-friendly[cite: 177]. By displaying multiple units simultaneously in a structured grid, users can view their curriculum at a glance without extensive vertical navigation.</p>
+            
+            <div class="row text-center mb-5 align-items-center">
+                <div class="col-md-6 mb-3">
+                    <img src="your-image-1.jpg" alt="Original Units Page with vertical list" class="comparison-img">
+                    <figcaption>Before: Linear Units Page [cite: 141]</figcaption>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="your-image-2.jpg" alt="Redesigned Units Page with grid layout" class="comparison-img">
+                    <figcaption>After: Grid Layout Units Page [cite: 156]</figcaption>
+                </div>
+            </div>
+
+            <p>We strongly recommend integrating English translations directly into the unit titles and navigation elements[cite: 178]. This drastically reduces the cognitive load for beginners. Additionally, adding accuracy metrics (star ratings and percentages) directly to the unit cards allows users to evaluate their mastery quickly without navigating to a separate progress page[cite: 179].</p>
+
+            <div class="row text-center mb-5 align-items-center">
+                <div class="col-md-6 mb-3">
+                    <img src="your-image-3.jpg" alt="Original Study Options Page" class="comparison-img">
+                    <figcaption>Before: Study Options Page [cite: 180]</figcaption>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="your-image-4.jpg" alt="Redesigned Study Options Page with Icons" class="comparison-img">
+                    <figcaption>After: Study Options Page with Icons [cite: 191]</figcaption>
+                </div>
+            </div>
+
+            <p>To resolve fragmented study workflows, the Study Options page should be redesigned to include clear, distinct icons for Flashcards, Vocabulary Games, Grammar Games, and Listening Games[cite: 194]. This visual differentiation helps users quickly scan and select their desired activity[cite: 195].</p>
+            
+            <div class="row text-center mb-5 align-items-center">
+                <div class="col-md-6 mb-3">
+                    <img src="your-image-5.jpg" alt="Original Flashcard Page" class="comparison-img">
+                    <figcaption>Before: Cluttered Flashcard Grid [cite: 211]</figcaption>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="your-image-6.jpg" alt="Redesigned Quizlet Style Flashcards" class="comparison-img">
+                    <figcaption>After: Quizlet-Style Flashcards [cite: 271]</figcaption>
+                </div>
+            </div>
+
+            <p>The flashcard system must be updated to a Quizlet-style scrollable design[cite: 272]. By placing the flashcards in a centralized, easily navigable carousel with highly visible functional buttons, users can review vocabulary with significantly less error.</p>
+            <p>Finally, we recommend replacing the open-ended feedback box with a structured submission form[cite: 274]. This new form collects detailed information such as Name, Email, Feedback Type, and Overall Experience Rating, enabling faster developer response through proper issue categorization[cite: 274].</p>
+            
+            <div class="row text-center mb-5 align-items-center">
+                <div class="col-md-6 mb-3">
+                    <img src="your-image-7.jpg" alt="Original Feedback Textbox" class="comparison-img">
+                    <figcaption>Before: Basic Feedback Page [cite: 273]</figcaption>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img src="your-image-8.jpg" alt="Redesigned Structured Feedback Form" class="comparison-img">
+                    <figcaption>After: Structured Feedback Form [cite: 274]</figcaption>
+                </div>
+            </div>
+
+            <div class="alert alert-primary mt-4" role="alert">
+                <strong>Explore our Interactive Prototype:</strong> At the following link you will find our fully interactive, high-fidelity prototype which demonstrates all major design recommendations. <br>
+                <a href="https://swirl-plaque-26019296.figma.site/" class="alert-link" target="_blank">View Figma Prototype Here</a>[cite: 176].
+            </div>
+        </section>
+
+        <section>
+            <h2 class="mb-4 border-bottom pb-2">Conclusion</h2>
+            <p>This usability study underscores the critical intersection between user interface design and educational efficacy. We learned that while gamification can successfully drive user motivation [cite: 277], its benefits are easily negated by technical friction, such as case-sensitive inputs [cite: 277] or convoluted navigation[cite: 62]. By grounding our redesign in concrete user testing data, we have transformed a frustrating experience into a streamlined, accessible learning environment that caters to absolute beginners and advancing students alike.</p>
+            
+            <p><strong>Engineering Hand-off:</strong> For seamless implementation of this design, the engineering team should prioritize updating the input validation logic on the backend to be case-insensitive, and integrate a virtual Korean keyboard API for the game modules. The grid layouts and structured feedback forms outlined in our Figma prototypes rely on standard CSS Flexbox/Grid and basic REST API endpoints, ensuring a straightforward technical lift without requiring a massive architectural overhaul.</p>
+        </section>
+
+    </main>
+</body>
+</html>
