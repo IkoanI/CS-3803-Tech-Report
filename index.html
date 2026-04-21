@@ -6,7 +6,27 @@
     <title>Korean Language Game: Usability Redesign</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .banner { background-color: #f8d7da; padding: 60px 0; border-bottom: 4px solid #dc3545; }
+        .banner {
+            background: linear-gradient(135deg, #f4c7d0, #f7e7c6);
+            padding: 110px 0;
+            color: #1f2328;
+        }
+        .banner h3 {
+            color: #444 !important;
+        }
+        .hero-card {
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(4px);
+        }
+        .title {
+            font-size: 2.6rem;  
+            white-space: nowrap; 
+        }
+        .logo {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
         .content-section { padding: 40px 0; }
         p { line-height: 1.8; font-size: 1.1rem; }
     </style>
@@ -15,7 +35,10 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">KLG Redesign</a>
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="recommendation_images/klglogo.png" alt="KLG Logo" class="logo">
+                <span class="brand-text">Redesign</span>
+            </a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
@@ -28,8 +51,8 @@
 
     <header class="banner text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Korean Language Game: Usability Study & Redesign [cite: 1]</h1>
-            <h3 class="text-muted mt-3">Authors: Koan L. Yeng, Jason, Jinho, Eujin, Steve [cite: 2]</h3>
+            <h1 class="fw-bold title">Korean Language Game: Usability Study & Redesign</h1>
+            <h3 class="text-muted mt-3">Authors: Koan L. Yeng, Jason, Jinho, Eujin, Steve</h3>
         </div>
     </header>
 
@@ -37,16 +60,38 @@
         
         <section class="mb-5">
             <h2 class="mb-4 border-bottom pb-2">Executive Summary</h2>
-            <p>The Korean Language Game was developed to assist students taking introductory Korean courses in mastering basic vocabulary and grammar[cite: 9]. To ensure optimal usability, our team conducted a mixed-methods usability study involving 20 participants[cite: 21, 22]. The study revealed significant user friction, primarily concerning navigation, discoverability, and input handling within the game modules[cite: 62, 133]. Specifically, users experienced frustration with case-sensitive text inputs and the lack of integrated Korean keyboard support during gameplay[cite: 277]. Additionally, the lack of English translations hindered beginner navigation, and accessing flashcards required unnecessary clicks[cite: 277].</p>
-            <p>To resolve these issues, we developed a high-fidelity prototype that introduces several core enhancements. We implemented a grid layout on the Units page to minimize scrolling[cite: 177]. We added English translations to aid beginners [cite: 178] and integrated accuracy metrics directly on the unit cards so users can quickly evaluate their mastery[cite: 179]. Furthermore, we overhauled the flashcards into a Quizlet-style scrollable design [cite: 272] and replaced the generic feedback box with a structured categorization form[cite: 274]. Ultimately, these design changes aim to streamline the learning process, reduce cognitive load, and foster a more engaging educational environment.</p>
+            
+            <p>
+                The Korean Language Game is an educational platform designed to help students in introductory Korean courses build foundational vocabulary and grammar skills. To evaluate its usability and effectiveness, our team conducted a mixed-methods usability study with 6 participants representative of beginner Korean learners. The goal of this study was to identify key usability challenges and develop design improvements to enhance the overall user experience.
+            </p>
+
+            <p>
+                The findings revealed several critical usability issues that impacted both efficiency and learning outcomes. Users experienced navigation and discoverability challenges, particularly when locating essential features like the account registration page and learning modules. Additionally, participants reported input-related frustration during gameplay due to strict answer validation, including case sensitivity and the requirement to input multiple meanings exactly. Users without a Korean keyboard also had difficulty entering responses. Another major issue was the lack of contextual support, as many beginner users struggled to understand content presented solely in Korean without English translations. These challenges increased cognitive load and reduced overall usability.
+            </p>
+
+            <p>
+                To address these issues, we developed a high-fidelity prototype with targeted design improvements. These include a grid-based Units page to reduce scrolling and improve navigation efficiency, the addition of audio and hints to support beginner comprehension, and the integration of accuracy metrics directly into unit cards for quick progress tracking. We also redesigned the flashcards into a Quizlet-style interface and improved the feedback system with structured input fields. Collectively, these changes aim to reduce user frustration, improve clarity, and create a more intuitive and effective learning experience.
+            </p>
         </section>
 
         <section>
             <h2 class="mb-4 border-bottom pb-2">Introduction</h2>
-            <p>The Korean Language Game is a web-based educational platform designed to assist students enrolled in introductory Korean courses (1001/1002)[cite: 9]. Whether users are interacting with the application for formal class requirements or simply to learn basic Korean[cite: 14], the platform aims to provide an engaging alternative to traditional studying methods.</p>
-            <p>Our target demographic consists of beginner language learners, many of whom have engaged with Korean culture through media such as K-dramas or have plans to travel to Korea[cite: 277]. These users require a highly intuitive interface that supports their learning journey without adding technical cognitive load.</p>
-            <p>We selected this product for our usability study because while the gamified concept is strong, preliminary observations suggested significant navigation and discoverability issues[cite: 62]. We hypothesized that users would experience input frustration during gameplay [cite: 133] and find the linear layout of the application cumbersome to navigate.</p>
-            <p>Through empirical testing, we sought to identify exactly where the platform was failing its users. By tracking task completion times and gathering qualitative feedback, we aimed to prove our hypotheses regarding input expectations [cite: 130] and ultimately propose a data-driven redesign to modernize the interface.</p>
+
+            <p>
+                The Korean Language Game is a web-based educational platform designed to support students learning Korean at an introductory level. The application aims to provide an engaging and interactive alternative to traditional study methods by incorporating fun activities such as flashcards, vocabulary games, grammar games, and listening games. By combining learning with gameplay, the platform is intended to improve user motivation and reinforce foundational language skills.
+            </p>
+
+            <p>
+                The primary target demographic for this product consists of beginner Korean learners, particularly university students enrolled in introductory Korean courses. Many of these users have limited prior experience with the language and often rely on structured guidance to build vocabulary and comprehension. Additionally, some users are motivated by personal interests, such as watching Korean media or preparing for travel, which further emphasizes the need for an intuitive and accessible learning interface that minimizes cognitive load.
+            </p>
+
+            <p>
+                Our team selected this product for usability evaluation due to its strong educational concept but noticeable interface limitations during initial exploration. While the gamified approach showed strength in enhancing user engagement, early observations suggested that users might encounter difficulties navigating the platform and understanding certain features.
+            </p>
+
+            <p>
+                Based on our initial exploration of the platform, we hypothesized several key usability flaws. We anticipated navigation and user interface issues that could require unnecessary steps to access essential features. Additionally, we predicted challenges in task comprehension within game interactions, where users were often expected to answer Korean vocabulary questions based solely on images or Korean text without English translations. We expected that this lack of contextual support would lead to confusion and reduced task success, especially for beginner learners.
+            </p>
         </section>
 
     </main>
