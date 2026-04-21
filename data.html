@@ -52,131 +52,213 @@
             </p>
         </section>
 
-        <section class="mb-5">
+        <section class="mb-5" id="findings">
             <h2 class="mb-4 border-bottom pb-2">Findings</h2>
-            
-            <p>Our quantitative data revealed significant discrepancies in task completion times. Task 4 consistently took the longest across all participants, with completion times ranging from 20 seconds to a peak of 136 seconds[cite: 277]. Conversely, Task 5 was completed rapidly, averaging under 10 seconds[cite: 277].</p>
-            
-            <div class="row mt-4 mb-4">
+
+            <h4 class="mt-3 mb-3">Participant Background (Pre-Test)</h4>
+            <p>None of the six participants were currently enrolled in a Korean class, though one (P3) expressed interest in joining. Prior study experience ranged from a few months of informal self-study (P1, P2, P3) to one to two years of practice (P4, P5), to roughly three years studied at a younger age (P6). Motivations included understanding K-dramas (P1, P2), conversational travel readiness (P3), self-assessment (P4), spelling practice (P5), and casual language review (P6). Only P5 had previously used a comparable language-learning app (Duolingo), noting that its beginner levels felt too easy. P2 also mentioned Duolingo but disliked its pushiness. The remaining participants had no prior app experience, giving them a neutral baseline for evaluation.</p>
+
+            <h4 class="mt-4 mb-3">Usability Issues Identified</h4>
+
+            <p><strong>Issue 1: Vocabulary Game Input Problems (Task 4):</strong> Task 4, which asked participants to play the vocabulary game, was the hardest task for all six participants. As shown in Figure 1, it had the highest average completion time at 80.5 seconds. For comparison, Task 1 averaged 48.3 seconds, meaning Task 4 took more than twice as long on average. Figure 2 shows an even bigger problem: individual completion times ranged from just 20 seconds for P3 all the way up to 136 seconds for P6. That is nearly a seven times difference, and it was not because some participants knew more Korean than others. The real problem was the game's design. The game required players to type answers using Korean characters, but the website did not provide a Korean keyboard. The game was also case sensitive, which meant a correct answer could still be marked wrong if it was typed with the wrong capitalization. Instead of actually learning vocabulary, participants spent most of their time trying to figure out how to type in Korean. P5 said: <em>"The game's answers had some open-endedness and the game is case sensitive."</em> P6 added: <em>"The game experience was fun but I need an option to turn on the Korean keyboard."</em></p>
+
+            <div class="row mt-3 mb-4">
                 <div class="col-md-6">
                     <div class="chart-container">
                         <canvas id="chartAvgTime"></canvas>
-                        <p class="text-center text-muted mt-2 small"><strong>Figure 1:</strong> Average Time Taken per Task (Seconds)</p>
+                        <p class="text-center text-muted mt-2 small"><strong>Figure 1:</strong> Average Completion Time Per Task (Seconds)</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="chart-container">
-                        <canvas id="chartTask4"></canvas>
-                        <p class="text-center text-muted mt-2 small"><strong>Figure 2:</strong> Time Taken on Task 4 per Participant</p>
+                        <canvas id="chartTask4Line"></canvas>
+                        <p class="text-center text-muted mt-2 small"><strong>Figure 2:</strong> Task 4 (Vocabulary Game) Completion Time per Participant (Seconds)</p>
                     </div>
                 </div>
+            </div>
+
+            <p><strong>Issue 2: Study Pages Were Hard to Navigate (Task 3):</strong> Task 3 asked participants to study vocabulary using the flashcard feature. This task had the second highest average completion time at 41.8 seconds, and P5 took 97 seconds on this task alone. The problem was not the flashcard content itself. The issue was that the flashcards and the vocabulary games were located on two completely separate pages. If a user wanted to switch between the two study modes, they had to click away from the current page and go searching for the other one. Participant 4 put it plainly: <em>"It wasn't the easiest. The flashcards and games are on a different page."</em> There were also no icons or labels to help users figure out where each study mode was before clicking through, which made it even more frustrating to navigate.</p>
+
+            <p><strong>Issue 3: Most of the Website Was Written Only in Korean:</strong> Two out of six participants, P3 and P6, both brought up the same issue on their own without being asked: large sections of the platform were written entirely in Korean with no English translation provided. This is a serious problem because the app is designed for beginner Korean learners, meaning many users may not be able to read Korean at all yet. P6 said: <em>"Earlier sections need an English translation for those who don't know any Korean."</em> P3 agreed, saying: <em>"Everything was in Korean so it might be better if it was in English [for early sections]."</em> The fact that both participants brought this up on their own, without any prompting, shows it was a very noticeable problem. It does not make sense for users to need to already know Korean just to get around an app that is supposed to teach them Korean.</p>
+
+            <p><strong>Issue 4: The Feedback Form Crashed or Did Not Work (Task 6):</strong> Task 6 asked participants to submit feedback using the website's feedback form. This was the only task in the entire study where some participants could not finish at all. As shown in Figure 3, only 4 out of 6 participants (67%) were able to complete this task. P4's submission caused the entire website to crash. P6 received a "Not Found" error after clicking submit. Even the participants who did submit feedback successfully only had a single blank text box to fill out, with no categories or guidance on what to include. P4 said: <em>"[Feedback] did crash the whole website. I want specific categories for feedback."</em> This shows that the feedback page had both a technical problem and a design problem happening at the same time.</p>
+
+            <div class="row mt-3 mb-4">
                 <div class="col-md-6">
                     <div class="chart-container">
-                        <canvas id="chartTask1"></canvas>
-                        <p class="text-center text-muted mt-2 small"><strong>Figure 3:</strong> Time Taken on Task 1 per Participant</p>
+                        <canvas id="chartSuccessRate"></canvas>
+                        <p class="text-center text-muted mt-2 small"><strong>Figure 3:</strong> Task Completion Success Rate by Task (%)</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="chart-container">
                         <canvas id="chartTotalTime"></canvas>
-                        <p class="text-center text-muted mt-2 small"><strong>Figure 4:</strong> Total Test Time per Participant</p>
+                        <p class="text-center text-muted mt-2 small"><strong>Figure 4:</strong> Total Session Time per Participant (Seconds)</p>
                     </div>
                 </div>
             </div>
 
-            <p>Qualitative feedback highlighted major navigation and discoverability issues[cite: 62]. Multiple users reported a lack of clarity in tasks[cite: 63], particularly regarding how to locate specific study materials like flashcards versus games.</p>
-            <p>During the "Red Light Green Light" game module, participants experienced notable input frustration[cite: 133]. The system exhibited a lack of learning support [cite: 129] and unclear answer expectations[cite: 130], leading to user errors.</p>
-            <p>Users also expressed difficulty navigating the initial Units page. The linear layout forced unnecessary scrolling, and the lack of English instructions alienated true beginners who were not yet familiar with the Korean alphabet[cite: 277].</p>
-            <p>Finally, the existing feedback mechanism was deeply flawed. One participant reported that attempting to submit feedback caused the entire website to crash[cite: 277], highlighting a critical functional error.</p>
+            <p><strong>Issue 5: The Sign-Up Button Was Hard to Find (Task 1):</strong> Task 1 asked participants to create an account on the platform. On average, this task took 48.3 seconds, the third highest of all seven tasks. The main reason it was difficult was that the landing page only showed a "Login" button. There was no visible "Register" or "Sign Up" button for new users. P4 pointed this out directly: <em>"There isn't a register button on the page, only login."</em> P4 had to guess that the login page would also lead to account creation, which is not something most new users would expect. As shown in Figure 4, total session times ranged from 96 seconds for P3 to 341 seconds for P5. That is a 3.5 times difference between the fastest and slowest participants, and small problems like this missing button added up to make the experience much harder for some users than others.</p>
 
-            <h4 class="mt-5 mb-3">User Frustration Quotes</h4>
+            <h4 class="mt-5 mb-3">Participant Quotes Highlighting Frustration and Confusion</h4>
             <table class="table table-bordered table-striped shadow-sm">
                 <thead class="table-dark">
                     <tr>
-                        <th style="width: 20%;">Participant</th>
-                        <th>Direct Quote Highlighting Frustration or Confusion</th>
+                        <th style="width: 15%;">Participant</th>
+                        <th style="width: 30%;">Task Context</th>
+                        <th>Quote</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>Participant 4</strong></td>
-                        <td>"It wasn't the easiest but its not the most intuative to navigate as it the flashcards and games are on a different page" [cite: 277]</td>
+                        <td>Task 1: Account Registration</td>
+                        <td>"There isn't a register button on the page, only login."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Participant 4</strong></td>
+                        <td>Task 3: Flashcard Navigation</td>
+                        <td>"It wasn't the easiest. The flashcards and games are on a different page. There is an unnecessary click for each unit."</td>
                     </tr>
                     <tr>
                         <td><strong>Participant 5</strong></td>
-                        <td>"some open endedness and the games is case sensitive" [cite: 277]</td>
+                        <td>Task 4: Vocabulary Game</td>
+                        <td>"The game's answers had some open-endedness and the game is case sensitive."</td>
                     </tr>
                     <tr>
                         <td><strong>Participant 6</strong></td>
-                        <td>"need an english translation for those who don't know any Korean" [cite: 277]</td>
+                        <td>Task 4: Vocabulary Game</td>
+                        <td>"The game experience was fun but I need an option to turn on the Korean keyboard."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Participant 4</strong></td>
+                        <td>Task 6: Feedback Submission</td>
+                        <td>"[Feedback] did crash the whole website. I want specific categories for feedback."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Participant 3</strong></td>
+                        <td>Unit Page Language</td>
+                        <td>"Everything was in Korean so it might be better if it was in English [for early sections]."</td>
                     </tr>
                     <tr>
                         <td><strong>Participant 6</strong></td>
-                        <td>"experience was fun but I need an option to tum on the Korean Keyboard" [cite: 277]</td>
+                        <td>Unit Page Language</td>
+                        <td>"Earlier sections need an English translation for those who don't know any Korean."</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <section class="mb-5">
+        <section class="mb-5" id="analysis">
             <h2 class="mb-4 border-bottom pb-2">Analysis</h2>
-            <p>As seen in the data visualizations above, the extended completion times for Task 4 directly correlate with the input frustration observed during gameplay[cite: 133]. Screen recordings and feedback revealed that the game's text entry was strictly case-sensitive and lacked integrated Korean keyboard support[cite: 277]. Because the system expected exact matches without providing technical input assistance, users spent excess time trying to format their answers rather than learning the language.</p>
-            <p>The discoverability issues reported by users stem from a fragmented information architecture. As Participant 4 noted, the flashcards and vocabulary games were housed on different pages, making the interface counterintuitive[cite: 277]. This unnecessary separation forces users to execute additional clicks to navigate between related study modes, slowing down the learning loop.</p>
-            <p>Furthermore, the absence of English translations on the primary navigation screens creates an immediate barrier to entry. Beginners cannot efficiently navigate a site written entirely in the language they are actively trying to learn, emphasizing the critical need for bilingual UI elements to support early-stage learners[cite: 277].</p>
-            <p>The crash experienced during the feedback task [cite: 277] indicates a lack of structured data handling on the backend. A generic, open-ended text box is insufficient for capturing actionable bug reports or user suggestions, resulting in poor system stability.</p>
-            <p>Despite these technical and navigational flaws, participants reacted positively to the gamified nature of the application itself[cite: 277]. This indicates that while the core concept is highly motivating, the UI execution must be refined to reduce friction and better support the end user.</p>
+
+            <p>Lookiing at Figure 2, the line graph of Task 4 completion times highlights the problem. P5 took 123 seconds and P6 took 136 seconds, while P3 finished the same task in just 20 seconds. That is more than a six times difference between the fastest and slowest participants. This gap was not caused by differences in Korean knowledge. Both P5 and P6 completed other tasks at a normal speed. The issue was the game itself since it required Korean character input but did not include a keyboard, and it marked answers wrong if the capitalization was off. Four out of six participants took over 75 seconds on this single task, which shows how big the problem was. Because of this, our team recommends adding a virtual Korean keyboard directly inside the game, as well as updating the game to accept answers regardless of capitalization. These two changes would remove the biggest source of difficulty found in the entire study.</p>
+
+            <p>As shown in Figure 1, Task 3 (studying flashcards) had an averagThat is more than a six times difference between the fastest and slowest pe completion time of 41.8 seconds. That is 2.4 times longer than Task 2, which averaged just 17.5 seconds and only required users to look up developer information. The gap is surprising because studying should be one of the easiest things to do on a learning app. The reason it was slow was that flashcards and vocabulary games were stored on different pages. Users expected to find them together, but instead had to navigate away to switch between study modes. P4 said there was "an unnecessary click for each unit," and P5 spent 97 seconds just trying to access the flashcards. This is why our team redesigned the Study Options page to put all study modes, including flashcards, vocabulary games, grammar games, and listening games, onto a single screen with a clear icon for each option.</p>
+
+            <p>The participant feedback points to a problem that the timing data alone does not fully show. Two out of six participants, which is 33%, brought up the same issue on their own without any prompting: too much of the website was written only in Korean. Since the app is meant for people who are just starting to learn the language, many users cannot read Korean yet. This puts them in a tough spot where they cannot use the app until they already know some of what the app is supposed to teach them. Participant 3 said, "Everything was in Korean so it might be better if it was in English," and Participant 6 agreed, saying, "Earlier sections need an English translation for those who don't know any Korean." To fix this, our redesigned Units page includes English translations on all unit titles, navigation labels, and instructions so that beginners can use the app from the very start.</p>
+
+            <p>Figure 3 shows the most serious problem we found in the study. Task 6, which involved submitting feedback, was the only task where some participants could not finish at all. Two out of six people (33%) ran into major errors which was that P4's form submission crashed the entire website, and P6 got a "Not Found" error message after clicking submit. The four participants who did manage to submit feedback were only given a blank text box with no instructions or categories to guide them. P4 said, "[Feedback] did crash the whole website. I want specific categories for feedback." This shows that the feedback page failed on both the technical side and the design side at the same time. Our redesigned feedback form fixes the broken submission so the page no longer crashes, and it replaces the empty text box with a dropdown menu that lets users choose a feedback category such as Bug Report, Feature Suggestion, or General Inquiry. This way, users can quickly pick an option instead of having to figure out what to write on their own.</p>
+
+            <p>As seen in Figure 4, total session times ranged from 96 seconds for P3 to 341 seconds for P5. That is a 3.5 times difference between the two, even though both participants came in with similar backgrounds and Korean experience. This large gap shows that the problems found in this study did not affect everyone equally. Some users hit multiple issues in a row, and those problems piled up. The missing "Register" button on the landing page is one example since it was a small design oversight that added real confusion to Task 1 for certain participants. When you look at all five problems together, including the game input issues, the confusing page navigation, the Korean-only text, the broken feedback form, and the missing sign-up button, a clear pattern comes through. These are all fixable problems on top of what is otherwise a creative and fun platform. Participants genuinely enjoyed the gamified learning format, with P1 calling it "really fun" and "more fun than just memorizing words." That means the core idea is strong. Our design changes focus on clearing away the specific problems that were getting in the way of that experience.</p>
         </section>
 
     </main>
 
     <script>
         const participants = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6'];
-        
-        // Chart 1: Average Time Per Task
+        const tasks = ['Task 1', 'Task 2', 'Task 3', 'Task 4', 'Task 5', 'Task 6', 'Task 7'];
+
+        const rawData = [
+            [47, 21, 76, 100, 5, 16, 7],
+            [60, 20, 10, 29, 12, 3, 4],
+            [27, 11, 12, 20, 6, 16, 4],
+            [50, 20, 33, 75, 12, 24, 5],
+            [34, 22, 97, 123, 4, 57, 4],
+            [72, 11, 23, 136, 3, 56, 4],
+        ];
+
+        const pColors = [
+            'rgba(54, 162, 235, 0.7)',
+            'rgba(255, 99, 132, 0.7)',
+            'rgba(75, 192, 192, 0.7)',
+            'rgba(255, 159, 64, 0.7)',
+            'rgba(153, 102, 255, 0.7)',
+            'rgba(255, 205, 86, 0.7)',
+        ];
+
+        // Figure 1: Average completion time per task (horizontal bar, Task 4 highlighted)
+        const avgTimes = tasks.map((_, t) =>
+            Math.round(rawData.reduce((s, p) => s + p[t], 0) / rawData.length * 10) / 10
+        );
         new Chart(document.getElementById('chartAvgTime'), {
             type: 'bar',
             data: {
-                labels: ['Task 1', 'Task 2', 'Task 3', 'Task 4', 'Task 5', 'Task 6', 'Task 7'],
+                labels: tasks,
                 datasets: [{
                     label: 'Avg Time (s)',
-                    data: [48.3, 17.5, 41.8, 80.5, 7.0, 28.6, 4.6],
-                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
+                    data: avgTimes,
+                    backgroundColor: avgTimes.map((_, i) => i === 3 ? 'rgba(255,99,132,0.75)' : 'rgba(54,162,235,0.7)'),
+                    borderColor:     avgTimes.map((_, i) => i === 3 ? 'rgba(255,99,132,1)'    : 'rgba(54,162,235,1)'),
                     borderWidth: 1
                 }]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { beginAtZero: true, title: { display: true, text: 'Average Time (seconds)' } }
+                }
             }
         });
 
-        // Chart 2: Task 4 Times (Line Graph)
-        new Chart(document.getElementById('chartTask4'), {
+        // Figure 2: Task 4 times per participant (line graph)
+        new Chart(document.getElementById('chartTask4Line'), {
             type: 'line',
             data: {
                 labels: participants,
                 datasets: [{
                     label: 'Task 4 Time (s)',
-                    data: [100, 29, 20, 75, 123, 136],
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    data: rawData.map(p => p[3]),
+                    borderColor: 'rgba(255,99,132,1)',
+                    backgroundColor: 'rgba(255,99,132,0.15)',
+                    pointBackgroundColor: 'rgba(255,99,132,1)',
+                    pointRadius: 6,
                     tension: 0.3,
                     fill: true
                 }]
+            },
+            options: {
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: 'Time (seconds)' } }
+                }
             }
         });
 
-        // Chart 3: Task 1 Times (Bar)
-        new Chart(document.getElementById('chartTask1'), {
+        // Figure 3: Task completion success rate (Task 6 highlighted as failure)
+        const successRates = [100, 100, 100, 100, 100, 67, 100];
+        new Chart(document.getElementById('chartSuccessRate'), {
             type: 'bar',
             data: {
-                labels: participants,
+                labels: tasks,
                 datasets: [{
-                    label: 'Task 1 Time (s)',
-                    data: [47, 60, 27, 50, 34, 72],
-                    backgroundColor: 'rgba(75, 192, 192, 0.6)'
+                    label: 'Success Rate (%)',
+                    data: successRates,
+                    backgroundColor: successRates.map(v => v < 100 ? 'rgba(255,99,132,0.75)' : 'rgba(75,192,192,0.7)'),
+                    borderColor:     successRates.map(v => v < 100 ? 'rgba(255,99,132,1)'    : 'rgba(75,192,192,1)'),
+                    borderWidth: 1
                 }]
+            },
+            options: {
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, max: 110, title: { display: true, text: 'Completion Rate (%)' } }
+                }
             }
         });
 
-        // Chart 4: Total Time per Participant
+        // Figure 4: Total session time per participant
         new Chart(document.getElementById('chartTotalTime'), {
             type: 'bar',
             data: {
@@ -184,10 +266,15 @@
                 datasets: [{
                     label: 'Total Time (s)',
                     data: [272, 138, 96, 219, 341, 305],
-                    backgroundColor: 'rgba(153, 102, 255, 0.6)'
+                    backgroundColor: pColors,
                 }]
             },
-            options: { indexAxis: 'y' }
+            options: {
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, title: { display: true, text: 'Time (seconds)' } }
+                }
+            }
         });
     </script>
 </body>
